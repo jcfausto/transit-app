@@ -12,8 +12,6 @@ podfile: TransitApp/Podfile
 
 before_install:
   - sudo gem install cocoapods
-  - brew update
-  - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
   - pod install --project-directory=TransitApp/
 
 script:
