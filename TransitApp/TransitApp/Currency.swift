@@ -8,13 +8,11 @@
 
 import Foundation
 
-
-class Currency {
+//Not need to be a class here, a struct will be fine
+struct Currency {
+    var symbol:String
     
-    var symbol: String = "None"
-    
-    init(aSymbol: String) {
-        self.symbol = aSymbol
+    init(symbol:String){
+        self.symbol = symbol
     }
-    
 }

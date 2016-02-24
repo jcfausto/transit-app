@@ -8,11 +8,11 @@
 
 import Foundation
 
-
-class Price {
+//Not need to be a class here, a struct will be fine
+struct Price {
     
-    var amount: Double = 0.0
-    var currency: Currency?
+    var amount: Double
+    var currency: Currency
     
     init(amount: Double, currency: Currency) {
         self.amount = amount

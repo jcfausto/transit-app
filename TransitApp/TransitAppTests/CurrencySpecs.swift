@@ -21,7 +21,7 @@ class CurrencySpecs: QuickSpec {
             context("initialization") {
                 beforeEach {
                     let currencySymbol = "EUR"
-                    currency = Currency(aSymbol: currencySymbol)
+                    currency = Currency(symbol: currencySymbol)
                 }
                 
                 it("initializes a new currency"){

@@ -8,12 +8,13 @@
 
 import Foundation
 
-class TravelMode {
+//Not need to be a class here, a struct will be fine
+struct TravelMode {
     
-    var mode: String = "None"
+    var mode: String?
     
-    init(aMode: String) {
-        self.mode = aMode
+    init(mode: String) {
+        self.mode = mode
     }
     
 }

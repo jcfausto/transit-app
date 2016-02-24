@@ -21,7 +21,7 @@ class PriceSpecs: QuickSpec {
             context("initialization") {
                 beforeEach {
                     let amount = 100.00
-                    let currency = Currency(aSymbol: "EUR")
+                    let currency = Currency(symbol: "EUR")
                     
                     price = Price(amount: amount, currency: currency)
                 }
@@ -36,9 +36,9 @@ class PriceSpecs: QuickSpec {
                 
                 
                 it("initializes the currency correctly"){
-                    let expectedCurrency = Currency(aSymbol: "EUR")
+                    let expectedCurrency = Currency(symbol: "EUR")
                     
-                    expect(price.currency!.symbol).to(equal(expectedCurrency.symbol))
+                    expect(price.currency.symbol).to(equal(expectedCurrency.symbol))
                 }
                 
             }

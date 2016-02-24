@@ -21,7 +21,7 @@ class TravelModeSpecs: QuickSpec {
             context("initialization") {
                 beforeEach {
                     let aMode = "Walk"
-                    travelMode = TravelMode(aMode: aMode)
+                    travelMode = TravelMode(mode: aMode)
                 }
                 
                 it("initializes a new travel mode"){
