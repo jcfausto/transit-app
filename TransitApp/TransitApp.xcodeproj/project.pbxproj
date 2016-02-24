@@ -21,6 +21,8 @@
 		8C3C7F991C7D47B400FF77EE /* CurrencySpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F981C7D47B400FF77EE /* CurrencySpecs.swift */; };
 		8C3C7F9B1C7D503700FF77EE /* TravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F9A1C7D503700FF77EE /* TravelMode.swift */; };
 		8C3C7F9D1C7D508800FF77EE /* TravelModeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F9C1C7D508800FF77EE /* TravelModeSpecs.swift */; };
+		8C3C7F9F1C7D521800FF77EE /* PriceSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */; };
+		8C3C7FA11C7D531200FF77EE /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA01C7D531200FF77EE /* Price.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		8C3C7F981C7D47B400FF77EE /* CurrencySpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencySpecs.swift; sourceTree = "<group>"; };
 		8C3C7F9A1C7D503700FF77EE /* TravelMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelMode.swift; sourceTree = "<group>"; };
 		8C3C7F9C1C7D508800FF77EE /* TravelModeSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModeSpecs.swift; sourceTree = "<group>"; };
+		8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSpecs.swift; sourceTree = "<group>"; };
+		8C3C7FA01C7D531200FF77EE /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE16F3E2767F3CF19B534B9 /* Pods-TransitAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TransitAppUITests/Pods-TransitAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		8C3C7F5F1C7D0A3C00FF77EE /* TransitAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */,
 				8C3C7F9C1C7D508800FF77EE /* TravelModeSpecs.swift */,
 				8C3C7F981C7D47B400FF77EE /* CurrencySpecs.swift */,
 				8C3C7F601C7D0A3C00FF77EE /* TransitAppTests.swift */,
@@ -156,6 +161,7 @@
 			children = (
 				8C3C7F961C7D44FD00FF77EE /* Currency.swift */,
 				8C3C7F9A1C7D503700FF77EE /* TravelMode.swift */,
+				8C3C7FA01C7D531200FF77EE /* Price.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -430,6 +436,7 @@
 				8C3C7F971C7D44FD00FF77EE /* Currency.swift in Sources */,
 				8C3C7F4E1C7D0A3C00FF77EE /* ViewController.swift in Sources */,
 				8C3C7F9B1C7D503700FF77EE /* TravelMode.swift in Sources */,
+				8C3C7FA11C7D531200FF77EE /* Price.swift in Sources */,
 				8C3C7F4C1C7D0A3C00FF77EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C3C7F9F1C7D521800FF77EE /* PriceSpecs.swift in Sources */,
 				8C3C7F991C7D47B400FF77EE /* CurrencySpecs.swift in Sources */,
 				8C3C7F611C7D0A3C00FF77EE /* TransitAppTests.swift in Sources */,
 				8C3C7F9D1C7D508800FF77EE /* TravelModeSpecs.swift in Sources */,
