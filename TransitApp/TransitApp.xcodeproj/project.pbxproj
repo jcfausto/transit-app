@@ -25,6 +25,9 @@
 		8C3C7FA11C7D531200FF77EE /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA01C7D531200FF77EE /* Price.swift */; };
 		8C3C7FA31C7E056A00FF77EE /* ProviderSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA21C7E056A00FF77EE /* ProviderSpecs.swift */; };
 		8C3C7FA51C7E06CD00FF77EE /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA41C7E06CD00FF77EE /* Provider.swift */; };
+		8C3C7FA71C7E07BB00FF77EE /* StopSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */; };
+		8C3C7FA91C7E0D8B00FF77EE /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA81C7E0D8B00FF77EE /* Stop.swift */; };
+		8C3C7FAC1C7E0EF800FF77EE /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FAB1C7E0EF800FF77EE /* NSDate+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		8C3C7FA01C7D531200FF77EE /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		8C3C7FA21C7E056A00FF77EE /* ProviderSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderSpecs.swift; sourceTree = "<group>"; };
 		8C3C7FA41C7E06CD00FF77EE /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSpecs.swift; sourceTree = "<group>"; };
+		8C3C7FA81C7E0D8B00FF77EE /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		8C3C7FAB1C7E0EF800FF77EE /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE16F3E2767F3CF19B534B9 /* Pods-TransitAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TransitAppUITests/Pods-TransitAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 		8C3C7F4A1C7D0A3C00FF77EE /* TransitApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C3C7FAA1C7E0EE300FF77EE /* Extensions */,
 				8C3C7F8F1C7D3E0700FF77EE /* Models */,
 				8C3C7F901C7D3E0E00FF77EE /* Views */,
 				8C3C7F911C7D3E1400FF77EE /* Controllers */,
@@ -142,6 +149,7 @@
 		8C3C7F5F1C7D0A3C00FF77EE /* TransitAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */,
 				8C3C7FA21C7E056A00FF77EE /* ProviderSpecs.swift */,
 				8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */,
 				8C3C7F9C1C7D508800FF77EE /* TravelModeSpecs.swift */,
@@ -168,6 +176,7 @@
 				8C3C7F9A1C7D503700FF77EE /* TravelMode.swift */,
 				8C3C7FA01C7D531200FF77EE /* Price.swift */,
 				8C3C7FA41C7E06CD00FF77EE /* Provider.swift */,
+				8C3C7FA81C7E0D8B00FF77EE /* Stop.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -202,6 +211,14 @@
 			children = (
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		8C3C7FAA1C7E0EE300FF77EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8C3C7FAB1C7E0EF800FF77EE /* NSDate+Extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		CCDADDCA0BA16D56B9F670E5 /* Frameworks */ = {
@@ -439,6 +456,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C3C7FAC1C7E0EF800FF77EE /* NSDate+Extension.swift in Sources */,
+				8C3C7FA91C7E0D8B00FF77EE /* Stop.swift in Sources */,
 				8C3C7F971C7D44FD00FF77EE /* Currency.swift in Sources */,
 				8C3C7F4E1C7D0A3C00FF77EE /* ViewController.swift in Sources */,
 				8C3C7F9B1C7D503700FF77EE /* TravelMode.swift in Sources */,
@@ -454,6 +473,7 @@
 			files = (
 				8C3C7F9F1C7D521800FF77EE /* PriceSpecs.swift in Sources */,
 				8C3C7FA31C7E056A00FF77EE /* ProviderSpecs.swift in Sources */,
+				8C3C7FA71C7E07BB00FF77EE /* StopSpecs.swift in Sources */,
 				8C3C7F991C7D47B400FF77EE /* CurrencySpecs.swift in Sources */,
 				8C3C7F611C7D0A3C00FF77EE /* TransitAppTests.swift in Sources */,
 				8C3C7F9D1C7D508800FF77EE /* TravelModeSpecs.swift in Sources */,
