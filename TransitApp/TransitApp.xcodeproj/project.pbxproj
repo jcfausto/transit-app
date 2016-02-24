@@ -112,11 +112,12 @@
 		8C3C7F4A1C7D0A3C00FF77EE /* TransitApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C3C7F8F1C7D3E0700FF77EE /* Models */,
+				8C3C7F901C7D3E0E00FF77EE /* Views */,
+				8C3C7F911C7D3E1400FF77EE /* Controllers */,
+				8C3C7F931C7D3E3A00FF77EE /* Data */,
+				8C3C7F921C7D3E3100FF77EE /* Assets */,
 				8C3C7F4B1C7D0A3C00FF77EE /* AppDelegate.swift */,
-				8C3C7F4D1C7D0A3C00FF77EE /* ViewController.swift */,
-				8C3C7F4F1C7D0A3C00FF77EE /* Main.storyboard */,
-				8C3C7F521C7D0A3C00FF77EE /* Assets.xcassets */,
-				8C3C7F541C7D0A3C00FF77EE /* LaunchScreen.storyboard */,
 				8C3C7F571C7D0A3C00FF77EE /* Info.plist */,
 			);
 			path = TransitApp;
@@ -138,6 +139,45 @@
 				8C3C7F6D1C7D0A3C00FF77EE /* Info.plist */,
 			);
 			path = TransitAppUITests;
+			sourceTree = "<group>";
+		};
+		8C3C7F8F1C7D3E0700FF77EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8C3C7F901C7D3E0E00FF77EE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8C3C7F4F1C7D0A3C00FF77EE /* Main.storyboard */,
+				8C3C7F541C7D0A3C00FF77EE /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8C3C7F911C7D3E1400FF77EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C3C7F4D1C7D0A3C00FF77EE /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8C3C7F921C7D3E3100FF77EE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8C3C7F521C7D0A3C00FF77EE /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		8C3C7F931C7D3E3A00FF77EE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		CCDADDCA0BA16D56B9F670E5 /* Frameworks */ = {
