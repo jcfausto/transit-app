@@ -1,12 +1,15 @@
 PODS:
+  - Argo (2.2.0)
   - Nimble (3.0.0)
   - Quick (0.9.1)
 
 DEPENDENCIES:
+  - Argo
   - Nimble (= 3.0.0)
   - Quick (~> 0.9.0)
 
 SPEC CHECKSUMS:
+  Argo: 4f52a32b4cd913c204e5a45f420b3fccad3e3f24
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Quick: a5221fc21788b6aeda934805e68b061839bc3165
 
