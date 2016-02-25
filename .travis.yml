@@ -14,5 +14,5 @@ before_install:
   - sudo gem install cocoapods
   - pod install --project-directory=TransitApp/
 
-script:
-  - xcodebuild test -workspace TransitApp/TransitApp.xcworkspace -scheme TransitAppTests -destination 'platform=iOS Simulator,name=iPhone 5s,OS=9.1'
+#script:
+#  - xcodebuild test -workspace TransitApp/TransitApp.xcworkspace -scheme TransitAppTests -destination 'platform=iOS Simulator,name=iPhone 5s,OS=9.1'
