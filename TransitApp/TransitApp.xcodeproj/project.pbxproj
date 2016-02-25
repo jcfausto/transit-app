@@ -28,6 +28,9 @@
 		8C3C7FA71C7E07BB00FF77EE /* StopSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */; };
 		8C3C7FA91C7E0D8B00FF77EE /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA81C7E0D8B00FF77EE /* Stop.swift */; };
 		8C3C7FAC1C7E0EF800FF77EE /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FAB1C7E0EF800FF77EE /* NSDate+Extension.swift */; };
+		8C3C7FAE1C7E7DB900FF77EE /* SegmentSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FAD1C7E7DB900FF77EE /* SegmentSpecs.swift */; };
+		8C3C7FB01C7E817D00FF77EE /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FAF1C7E817D00FF77EE /* Segment.swift */; };
+		8C3C7FB21C7E846E00FF77EE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FB11C7E846E00FF77EE /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSpecs.swift; sourceTree = "<group>"; };
 		8C3C7FA81C7E0D8B00FF77EE /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		8C3C7FAB1C7E0EF800FF77EE /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		8C3C7FAD1C7E7DB900FF77EE /* SegmentSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentSpecs.swift; sourceTree = "<group>"; };
+		8C3C7FAF1C7E817D00FF77EE /* Segment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
+		8C3C7FB11C7E846E00FF77EE /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE16F3E2767F3CF19B534B9 /* Pods-TransitAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransitAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TransitAppUITests/Pods-TransitAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 		8C3C7F5F1C7D0A3C00FF77EE /* TransitAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				8C3C7FAD1C7E7DB900FF77EE /* SegmentSpecs.swift */,
 				8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */,
 				8C3C7FA21C7E056A00FF77EE /* ProviderSpecs.swift */,
 				8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */,
@@ -177,6 +184,7 @@
 				8C3C7FA01C7D531200FF77EE /* Price.swift */,
 				8C3C7FA41C7E06CD00FF77EE /* Provider.swift */,
 				8C3C7FA81C7E0D8B00FF77EE /* Stop.swift */,
+				8C3C7FAF1C7E817D00FF77EE /* Segment.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -217,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				8C3C7FAB1C7E0EF800FF77EE /* NSDate+Extension.swift */,
+				8C3C7FB11C7E846E00FF77EE /* UIColor+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -457,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C3C7FAC1C7E0EF800FF77EE /* NSDate+Extension.swift in Sources */,
+				8C3C7FB01C7E817D00FF77EE /* Segment.swift in Sources */,
 				8C3C7FA91C7E0D8B00FF77EE /* Stop.swift in Sources */,
 				8C3C7F971C7D44FD00FF77EE /* Currency.swift in Sources */,
 				8C3C7F4E1C7D0A3C00FF77EE /* ViewController.swift in Sources */,
@@ -464,6 +474,7 @@
 				8C3C7FA11C7D531200FF77EE /* Price.swift in Sources */,
 				8C3C7FA51C7E06CD00FF77EE /* Provider.swift in Sources */,
 				8C3C7F4C1C7D0A3C00FF77EE /* AppDelegate.swift in Sources */,
+				8C3C7FB21C7E846E00FF77EE /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C3C7F9F1C7D521800FF77EE /* PriceSpecs.swift in Sources */,
+				8C3C7FAE1C7E7DB900FF77EE /* SegmentSpecs.swift in Sources */,
 				8C3C7FA31C7E056A00FF77EE /* ProviderSpecs.swift in Sources */,
 				8C3C7FA71C7E07BB00FF77EE /* StopSpecs.swift in Sources */,
 				8C3C7F991C7D47B400FF77EE /* CurrencySpecs.swift in Sources */,
