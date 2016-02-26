@@ -9,5 +9,5 @@
 import Foundation
 
 enum TransitAppError: ErrorType {
-    case JSONDecodingError(errorMessage: String)
+    case JSONDecodingError(errorMessage:String)
 }

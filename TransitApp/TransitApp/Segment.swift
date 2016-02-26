@@ -8,19 +8,20 @@
 
 import Foundation
 import UIKit
+import Unbox
 
-struct Segment {
+struct Segment: Unboxable {
     var name: String?
     var numStops: Int
     var description: String?
     var stops: [Stop]
-    var travelMode: TravelMode
+    var travelMode: String
     var color: UIColor
     var iconUrl: String
     var polyline: String
     
-    init(name: String?, numStops: Int, description: String?, stops: [Stop],
-        travelMode: TravelMode, color: UIColor, iconUrl: String, polyline: String)
+    init(name: String, numStops: Int, description: String, stops: [Stop],
+        travelMode: String, color: UIColor, iconUrl: String, polyline: String)
     {
         self.name = name
         self.numStops = numStops
@@ -31,4 +32,17 @@ struct Segment {
         self.iconUrl = iconUrl
         self.polyline = polyline
     }
+    
+    init(unboxer: Unboxer) {
+        self.name = unboxer.unbox("name")
+        self.numStops = unboxer.unbox("num_stops")
+        self.description = unboxer.unbox("description")
+        self.stops = unboxer.unbox("stops")
+        self.travelMode = unboxer.unbox("travel_mode")
+        self.color = UIColor(hexString: unboxer.unbox("color"))
+        self.iconUrl = unboxer.unbox("icon_url")
+        self.polyline = unboxer.unbox("polyline")
+    }
+
+
 }

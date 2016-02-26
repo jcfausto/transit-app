@@ -1,8 +1,8 @@
 //
-//  RouteSpecs.swift
+//  RoutesSpecs.swift
 //  TransitApp
 //
-//  Created by Julio Cesar Fausto on 24/02/16.
+//  Created by Julio Cesar Fausto on 25/02/16.
 //  Copyright © 2016 Julio Cesar Fausto. All rights reserved.
 //
 
@@ -10,8 +10,7 @@ import Quick
 import Nimble
 @testable import TransitApp
 
-class RouteSpecs: QuickSpec {
-    
+class RoutesSpecs: QuickSpec {
     
     //MARK: Support routines
     
@@ -52,45 +51,33 @@ class RouteSpecs: QuickSpec {
         return Segment(name: "U2", numStops: 2, description: "S+U Potsdamer Platz", stops: stops, travelMode: travelMode, color: color, iconUrl: iconUrl, polyline: polyline)
     }
     
-    //MARK: Testing routines
-    
     override func spec() {
-        
-        describe("Route"){
+       
+        describe("Routes"){
             
-            var route: Route!
+            var routes: Routes!
             
             beforeEach {
-                let type = "public_transport"
-                let provider = "vbb"
-                
+
                 let segmentOne = self.createSegmentOne()
                 let segmentTwo = self.createSegmentTwo()
+                let price = Price(amount: 10.50, currency: "EUR")
                 
-                let segments = [segmentOne, segmentTwo]
+                let routeOne = Route(type: "public_transport", provider: "vbb", segments: [segmentOne, segmentTwo], price: price)
+                let routeTwo = Route(type: "public_transport", provider: "taxi", segments: [segmentOne, segmentTwo], price: price)
                 
-                let price = Price(amount: 0.0, currency: "EUR")
-                
-                route = Route(type: type, provider: provider, segments: segments, price: price)
+                routes = Routes(withRoutes: [routeOne, routeTwo])
             }
             
-            it("has a type"){
-                expect(route.type).to(equal("public_transport"))
+            it("has more than one route"){
+                expect(routes.routes.count).to(beGreaterThan(1))
             }
             
-            it("has a provider"){
-                expect(route.provider).to(equal("vbb"))
-            }
             
-            it("has two segments"){
-                expect(route.segments.count).to(equal(2))
-            }
-            
-            it("has a price"){
-                expect(route.price!.amount).to(equal(0.0))
-            }
             
         }
         
     }
+
+    
 }

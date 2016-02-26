@@ -3,8 +3,9 @@
 use_frameworks!
 
 # To decode json to models
-pod 'Argo'
-pod 'Curry'
+# pod 'Argo'
+# pod 'Curry'
+pod 'Unbox'
 
 def testing_pods
     pod 'Quick', '~> 0.9.0'

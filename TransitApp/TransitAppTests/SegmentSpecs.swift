@@ -29,8 +29,8 @@ class SegmentSpecs: QuickSpec {
                 let stop2 = Stop(name: "S+U Alexanderplatz", latitude: 52.522074, longitude: 13.413595, time: NSDate(datetimeString: "2015-04-17T13:40:00+02:00"))
                 
                 let stops = [stop1, stop2]
-                
-                let travelMode = TravelMode(mode: "Walking")
+            
+                let travelMode = "Walking"
                 
                 //Used an extension here
                 let color = UIColor(hexString: "#b1ecc")
@@ -38,7 +38,7 @@ class SegmentSpecs: QuickSpec {
                 let iconUrl = "https://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svg"
                 let polyline = "uvr_I{yxpABuAFcAp@yHvAwNr@iGPwAh@a@jAg@"
                 
-                segment = Segment(name: name, numStops: numStops, description: description, stops: stops, travelMode:travelMode, color: color, iconUrl: iconUrl, polyline: polyline)
+                segment = Segment(name: name, numStops: numStops, description: description, stops: stops, travelMode: travelMode, color: color, iconUrl: iconUrl, polyline: polyline)
             }
             
             it("has a name"){
@@ -96,7 +96,7 @@ class SegmentSpecs: QuickSpec {
             }
             
             it("has a travel mode"){
-                expect(segment.travelMode.mode).to(equal("Walking"))
+                expect(segment.travelMode).to(equal("Walking"))
             }
             
             it("has a color"){

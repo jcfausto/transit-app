@@ -17,14 +17,8 @@
 		8C3C7F611C7D0A3C00FF77EE /* TransitAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F601C7D0A3C00FF77EE /* TransitAppTests.swift */; };
 		8C3C7F6C1C7D0A3C00FF77EE /* TransitAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F6B1C7D0A3C00FF77EE /* TransitAppUITests.swift */; };
 		8C3C7F7A1C7D0A6100FF77EE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8C3C7F791C7D0A6100FF77EE /* Podfile */; };
-		8C3C7F971C7D44FD00FF77EE /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F961C7D44FD00FF77EE /* Currency.swift */; };
-		8C3C7F991C7D47B400FF77EE /* CurrencySpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F981C7D47B400FF77EE /* CurrencySpecs.swift */; };
-		8C3C7F9B1C7D503700FF77EE /* TravelMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F9A1C7D503700FF77EE /* TravelMode.swift */; };
-		8C3C7F9D1C7D508800FF77EE /* TravelModeSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F9C1C7D508800FF77EE /* TravelModeSpecs.swift */; };
 		8C3C7F9F1C7D521800FF77EE /* PriceSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */; };
 		8C3C7FA11C7D531200FF77EE /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA01C7D531200FF77EE /* Price.swift */; };
-		8C3C7FA31C7E056A00FF77EE /* ProviderSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA21C7E056A00FF77EE /* ProviderSpecs.swift */; };
-		8C3C7FA51C7E06CD00FF77EE /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA41C7E06CD00FF77EE /* Provider.swift */; };
 		8C3C7FA71C7E07BB00FF77EE /* StopSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */; };
 		8C3C7FA91C7E0D8B00FF77EE /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA81C7E0D8B00FF77EE /* Stop.swift */; };
 		8C3C7FAC1C7E0EF800FF77EE /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FAB1C7E0EF800FF77EE /* NSDate+Extension.swift */; };
@@ -34,6 +28,10 @@
 		8C3C7FB41C7E8EBC00FF77EE /* RouteSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FB31C7E8EBB00FF77EE /* RouteSpecs.swift */; };
 		8C3C7FB61C7E942F00FF77EE /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FB51C7E942F00FF77EE /* Route.swift */; };
 		8C3C7FB81C7E964100FF77EE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C3C7FB71C7E964100FF77EE /* data.json */; };
+		8C3C7FBB1C7E9B8C00FF77EE /* TransitAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FBA1C7E9B8C00FF77EE /* TransitAppError.swift */; };
+		8C3C7FBD1C7FAD2600FF77EE /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FBC1C7FAD2600FF77EE /* DateFormatterHelper.swift */; };
+		8C9036211C7FD9E600E6F985 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036201C7FD9E600E6F985 /* Routes.swift */; };
+		8C9036231C7FDA8500E6F985 /* RoutesSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036221C7FDA8500E6F985 /* RoutesSpecs.swift */; };
 		DD82B35F14DBE3D3FAA2F4DE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD1025CE71D20E283EEAD6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,14 +71,8 @@
 		8C3C7F6B1C7D0A3C00FF77EE /* TransitAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitAppUITests.swift; sourceTree = "<group>"; };
 		8C3C7F6D1C7D0A3C00FF77EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C3C7F791C7D0A6100FF77EE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		8C3C7F961C7D44FD00FF77EE /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		8C3C7F981C7D47B400FF77EE /* CurrencySpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencySpecs.swift; sourceTree = "<group>"; };
-		8C3C7F9A1C7D503700FF77EE /* TravelMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelMode.swift; sourceTree = "<group>"; };
-		8C3C7F9C1C7D508800FF77EE /* TravelModeSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravelModeSpecs.swift; sourceTree = "<group>"; };
 		8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSpecs.swift; sourceTree = "<group>"; };
 		8C3C7FA01C7D531200FF77EE /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
-		8C3C7FA21C7E056A00FF77EE /* ProviderSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProviderSpecs.swift; sourceTree = "<group>"; };
-		8C3C7FA41C7E06CD00FF77EE /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSpecs.swift; sourceTree = "<group>"; };
 		8C3C7FA81C7E0D8B00FF77EE /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		8C3C7FAB1C7E0EF800FF77EE /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
@@ -90,6 +82,10 @@
 		8C3C7FB31C7E8EBB00FF77EE /* RouteSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSpecs.swift; sourceTree = "<group>"; };
 		8C3C7FB51C7E942F00FF77EE /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		8C3C7FB71C7E964100FF77EE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		8C3C7FBA1C7E9B8C00FF77EE /* TransitAppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitAppError.swift; sourceTree = "<group>"; };
+		8C3C7FBC1C7FAD2600FF77EE /* DateFormatterHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
+		8C9036201C7FD9E600E6F985 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		8C9036221C7FDA8500E6F985 /* RoutesSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesSpecs.swift; sourceTree = "<group>"; };
 		BF86CDA0AF2FEC7952F73F0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +147,7 @@
 		8C3C7F4A1C7D0A3C00FF77EE /* TransitApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C3C7FB91C7E9B6900FF77EE /* Helpers */,
 				8C3C7FAA1C7E0EE300FF77EE /* Extensions */,
 				8C3C7F8F1C7D3E0700FF77EE /* Models */,
 				8C3C7F901C7D3E0E00FF77EE /* Views */,
@@ -166,13 +163,11 @@
 		8C3C7F5F1C7D0A3C00FF77EE /* TransitAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				8C9036221C7FDA8500E6F985 /* RoutesSpecs.swift */,
 				8C3C7FB31C7E8EBB00FF77EE /* RouteSpecs.swift */,
 				8C3C7FAD1C7E7DB900FF77EE /* SegmentSpecs.swift */,
 				8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */,
-				8C3C7FA21C7E056A00FF77EE /* ProviderSpecs.swift */,
 				8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */,
-				8C3C7F9C1C7D508800FF77EE /* TravelModeSpecs.swift */,
-				8C3C7F981C7D47B400FF77EE /* CurrencySpecs.swift */,
 				8C3C7F601C7D0A3C00FF77EE /* TransitAppTests.swift */,
 				8C3C7F621C7D0A3C00FF77EE /* Info.plist */,
 			);
@@ -191,13 +186,11 @@
 		8C3C7F8F1C7D3E0700FF77EE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8C3C7F961C7D44FD00FF77EE /* Currency.swift */,
-				8C3C7F9A1C7D503700FF77EE /* TravelMode.swift */,
 				8C3C7FA01C7D531200FF77EE /* Price.swift */,
-				8C3C7FA41C7E06CD00FF77EE /* Provider.swift */,
 				8C3C7FA81C7E0D8B00FF77EE /* Stop.swift */,
 				8C3C7FAF1C7E817D00FF77EE /* Segment.swift */,
 				8C3C7FB51C7E942F00FF77EE /* Route.swift */,
+				8C9036201C7FD9E600E6F985 /* Routes.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -242,6 +235,15 @@
 				8C3C7FB11C7E846E00FF77EE /* UIColor+Extension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8C3C7FB91C7E9B6900FF77EE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8C3C7FBA1C7E9B8C00FF77EE /* TransitAppError.swift */,
+				8C3C7FBC1C7FAD2600FF77EE /* DateFormatterHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		CCDADDCA0BA16D56B9F670E5 /* Frameworks */ = {
@@ -532,15 +534,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C3C7FAC1C7E0EF800FF77EE /* NSDate+Extension.swift in Sources */,
+				8C9036211C7FD9E600E6F985 /* Routes.swift in Sources */,
 				8C3C7FB01C7E817D00FF77EE /* Segment.swift in Sources */,
 				8C3C7FB61C7E942F00FF77EE /* Route.swift in Sources */,
+				8C3C7FBD1C7FAD2600FF77EE /* DateFormatterHelper.swift in Sources */,
 				8C3C7FA91C7E0D8B00FF77EE /* Stop.swift in Sources */,
-				8C3C7F971C7D44FD00FF77EE /* Currency.swift in Sources */,
 				8C3C7F4E1C7D0A3C00FF77EE /* ViewController.swift in Sources */,
-				8C3C7F9B1C7D503700FF77EE /* TravelMode.swift in Sources */,
 				8C3C7FA11C7D531200FF77EE /* Price.swift in Sources */,
-				8C3C7FA51C7E06CD00FF77EE /* Provider.swift in Sources */,
 				8C3C7F4C1C7D0A3C00FF77EE /* AppDelegate.swift in Sources */,
+				8C3C7FBB1C7E9B8C00FF77EE /* TransitAppError.swift in Sources */,
 				8C3C7FB21C7E846E00FF77EE /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,14 +551,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9036231C7FDA8500E6F985 /* RoutesSpecs.swift in Sources */,
 				8C3C7FB41C7E8EBC00FF77EE /* RouteSpecs.swift in Sources */,
 				8C3C7F9F1C7D521800FF77EE /* PriceSpecs.swift in Sources */,
 				8C3C7FAE1C7E7DB900FF77EE /* SegmentSpecs.swift in Sources */,
-				8C3C7FA31C7E056A00FF77EE /* ProviderSpecs.swift in Sources */,
 				8C3C7FA71C7E07BB00FF77EE /* StopSpecs.swift in Sources */,
-				8C3C7F991C7D47B400FF77EE /* CurrencySpecs.swift in Sources */,
 				8C3C7F611C7D0A3C00FF77EE /* TransitAppTests.swift in Sources */,
-				8C3C7F9D1C7D508800FF77EE /* TravelModeSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
