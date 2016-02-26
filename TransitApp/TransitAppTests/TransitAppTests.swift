@@ -47,6 +47,15 @@ class TransitAppTests: XCTestCase {
         }
 
     }
+    
+    /**
+     Testing the NSInterval+Extension created to provide a 
+     string representation of an inveval in minutes.
+     */
+    func testCanGetTimeIntervalInStringFormatMinutes(){
+        let interval: NSTimeInterval = 6000
+        XCTAssertEqual(interval.stringValueInMinutes, "40 min")
+    }
 
     
 }
