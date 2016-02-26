@@ -1,29 +1,15 @@
 language: objective-c
 osx_image: xcode7.1
 
-sudo: false
 branches:
   only:
     - master
-
-xcode_project: TransitApp/TransitApp.xcodeproj
-xcode_scheme: TransitApp/TransitAppTests
-osx_image: xcode7.1
-xcode_sdk: iphonesimulator9.1
-podfile: TransitApp/Podfile
-
-before_install:
-  - ./travis/before_install.sh
-
-bundler_args: --without documentation --without development --deployment --jobs=3 --retry=3
 
 script:
   - ./travis/script.sh
   # This is a workaround for a Travis-CI bug where the log might get cut-off.
   # See the [Travis-CI issue #4716](https://github.com/travis-ci/travis-ci/issues/4716).
   - sleep 3
-
-after_success: ./ci/after_success.sh
 
 env:
   global:
@@ -33,7 +19,6 @@ env:
     - SCHEME_IOS="TransitApp-iOS"
     - BUILD="clean build"
     - BUILD_TEST="clean build test"
-    - ENABLE_CODE_COVERAGE="-enableCodeCoverage YES"
     - PROJECT_FRAMEWORK="TransitApp/TransitApp.xcodeproj"
   matrix:
     - TEST_SDK=iphonesimulator  TEST_DEST="platform=iOS Simulator,OS=9.1,name=iPhone 5s"   SCHEME="$SCHEME_IOS"    BUILD_ACTIONS="$BUILD_TEST" EXTRA_ARGUMENTS="$ENABLE_CODE_COVERAGE" PROJECT="$PROJECT_FRAMEWORK"
