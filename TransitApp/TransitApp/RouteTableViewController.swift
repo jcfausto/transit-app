@@ -66,9 +66,14 @@ class RouteTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RouteTableViewCell
         
         if let route: Route = routes?.routes[indexPath.row] {
-            cell.routeName.text = route.type
-
-            cell.routeDetails.text = "\(route.price?.currency): \(route.price?.amount)"
+            cell.routeProviderLabel.text = route.provider
+            
+            cell.routeSummaryLabel.text = route.summary
+            
+            //Uses the NSTimeInterval+Extension stringValueInMinutes
+            cell.routeDurationLabel.text = route.duration.stringValueInMinutes
+            
+            cell.routeSegmentsView.segments = route.segments
         }
 
 

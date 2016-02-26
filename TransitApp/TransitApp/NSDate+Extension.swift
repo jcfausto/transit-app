@@ -21,4 +21,19 @@ extension NSDate {
         self.init(timeInterval:0, sinceDate:nDate)
     }
     
+    
+    /**
+     This representation returns the time portion of the date only
+     whith the hour and minute (HH:MM)
+    */
+    var stringValueWithHourAndMinute: String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:MM"
+        let calendar = NSCalendar.currentCalendar()
+        let comp = calendar.components([.Hour, .Minute], fromDate: self)
+        let hour = comp.hour
+        let minute = comp.minute
+        return "\(hour):\(minute)"
+    }
+    
 }

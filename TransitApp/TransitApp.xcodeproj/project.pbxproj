@@ -34,6 +34,8 @@
 		8C9036231C7FDA8500E6F985 /* RoutesSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036221C7FDA8500E6F985 /* RoutesSpecs.swift */; };
 		8C9036651C7FF64400E6F985 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036641C7FF64400E6F985 /* RouteTableViewCell.swift */; };
 		8C9036671C7FF91400E6F985 /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036661C7FF91400E6F985 /* RouteTableViewController.swift */; };
+		8C9036691C80AE7300E6F985 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036681C80AE7300E6F985 /* NSTimeInterval+Extension.swift */; };
+		8C90366B1C8106D000E6F985 /* RouteSegmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90366A1C8106CF00E6F985 /* RouteSegmentsView.swift */; };
 		DD82B35F14DBE3D3FAA2F4DE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD1025CE71D20E283EEAD6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,8 @@
 		8C9036221C7FDA8500E6F985 /* RoutesSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesSpecs.swift; sourceTree = "<group>"; };
 		8C9036641C7FF64400E6F985 /* RouteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
 		8C9036661C7FF91400E6F985 /* RouteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTableViewController.swift; sourceTree = "<group>"; };
+		8C9036681C80AE7300E6F985 /* NSTimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Extension.swift"; sourceTree = "<group>"; };
+		8C90366A1C8106CF00E6F985 /* RouteSegmentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegmentsView.swift; sourceTree = "<group>"; };
 		BF86CDA0AF2FEC7952F73F0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +208,8 @@
 			children = (
 				8C3C7F4F1C7D0A3C00FF77EE /* Main.storyboard */,
 				8C3C7F541C7D0A3C00FF77EE /* LaunchScreen.storyboard */,
+				8C90366A1C8106CF00E6F985 /* RouteSegmentsView.swift */,
+				8C9036641C7FF64400E6F985 /* RouteTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -212,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				8C3C7F4D1C7D0A3C00FF77EE /* ViewController.swift */,
-				8C9036641C7FF64400E6F985 /* RouteTableViewCell.swift */,
 				8C9036661C7FF91400E6F985 /* RouteTableViewController.swift */,
 			);
 			name = Controllers;
@@ -239,6 +244,7 @@
 			children = (
 				8C3C7FAB1C7E0EF800FF77EE /* NSDate+Extension.swift */,
 				8C3C7FB11C7E846E00FF77EE /* UIColor+Extension.swift */,
+				8C9036681C80AE7300E6F985 /* NSTimeInterval+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -539,9 +545,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C90366B1C8106D000E6F985 /* RouteSegmentsView.swift in Sources */,
 				8C3C7FAC1C7E0EF800FF77EE /* NSDate+Extension.swift in Sources */,
 				8C9036651C7FF64400E6F985 /* RouteTableViewCell.swift in Sources */,
 				8C9036211C7FD9E600E6F985 /* Routes.swift in Sources */,
+				8C9036691C80AE7300E6F985 /* NSTimeInterval+Extension.swift in Sources */,
 				8C3C7FB01C7E817D00FF77EE /* Segment.swift in Sources */,
 				8C9036671C7FF91400E6F985 /* RouteTableViewController.swift in Sources */,
 				8C3C7FB61C7E942F00FF77EE /* Route.swift in Sources */,

@@ -90,6 +90,13 @@ class RouteSpecs: QuickSpec {
                 expect(route.price!.amount).to(equal(0.0))
             }
             
+            it("has a duration"){
+                let start = NSDate(datetimeString: "2015-04-17T13:30:00+02:00")
+                let finish = NSDate(datetimeString: "2015-04-17T13:40:00+02:00")
+                let expected_duration = finish.timeIntervalSinceDate(start)
+                expect(route.duration).to(equal(expected_duration))
+            }
+            
         }
         
     }
