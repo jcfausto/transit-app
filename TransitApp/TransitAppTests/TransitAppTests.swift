@@ -9,6 +9,10 @@
 import XCTest
 //To decode json to models
 import Unbox
+//To test polylines
+import CoreLocation
+import Polyline
+
 @testable import TransitApp
 
 class TransitAppTests: XCTestCase {
@@ -83,6 +87,40 @@ class TransitAppTests: XCTestCase {
             XCTAssertFalse(false)
         }
 
+    }
+    
+    /**
+    Testing Polylines decoding with 6 digit precision
+    Polyline with 9 points for testing:
+    Points: 
+     - 0: 52.528187, 13.410404
+     - 1: 52.522074, 13.413595
+     - 2: 52.517229, 13.412454
+     - 3: 52.512006, 13.408768
+     - 4: 52.511305, 13.40235
+     - 5: 52.513363, 13.395347
+     - 6: 52.512168, 13.389711
+     - 7: 52.511521, 13.383796
+     - 8: 52.509067, 13.37798
+    */
+    func testCanDecodePolyline(){
+        let polyline = Polyline(encodedPolyline: "elr_I_fzpAfe@_Sf]dFr_@~UjCbg@yKvj@lFfb@`C|c@hNjc@")
+        let coordinates: [CLLocationCoordinate2D]? = polyline.coordinates
+        let decodedLocations: [CLLocation]? = polyline.locations
+        XCTAssertNotNil(decodedLocations)
+        XCTAssertNotNil(coordinates)
+        XCTAssertEqual(coordinates!.count, 9)
+        
+        if let decodedLocations = decodedLocations {
+            let initialLocation = decodedLocations[0]
+            //There are some issues with precision. due to this, the expected value will be rounded to 5 digits precision.
+            XCTAssertEqual(initialLocation.coordinate.latitude, 52.52819)
+            XCTAssertEqual(initialLocation.coordinate.longitude, 13.4104)
+        }else {
+            XCTFail("Locations were not decoded properly")
+        }
+        
+        //XCTAssertEqual(coordinateOne.latitude, 52.528187)
     }
 
     

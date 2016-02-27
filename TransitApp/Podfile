@@ -5,12 +5,13 @@ platform :ios, '9.1'
 use_frameworks!
 
 # To decode json to models
-# pod 'Argo'
-# pod 'Curry'
 pod 'Unbox'
 
+# For maps
 pod 'GoogleMaps'
+pod 'Polyline', '~> 3.0'
 
+# For testing
 def testing_pods
     pod 'Quick', '~> 0.9.0'
     pod 'Nimble', '3.0.0'
