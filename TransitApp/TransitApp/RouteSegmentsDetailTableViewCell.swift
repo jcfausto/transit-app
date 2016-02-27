@@ -16,6 +16,7 @@ class RouteSegmentsDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var segmentFinishTimeLabel: UILabel!
     @IBOutlet weak var segmentNameLabel: UILabel!
     @IBOutlet weak var segmentTravelModeLabel: UILabel!
+    @IBOutlet weak var segmentDetailVerticalLineView: SegmentDetailVerticalLineView!
     
     @IBOutlet weak var segmentEstimatedDurationLabel: UILabel!
     override func awakeFromNib() {

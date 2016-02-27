@@ -72,10 +72,15 @@ class RouteSegmentsDetailViewController: UIViewController, UITableViewDelegate, 
             let firstStop = route.segments[indexPath.row].stops.first
             let lastStop = route.segments[indexPath.row].stops.last
             
+            //Segment vertical line color
+            cell.segmentDetailVerticalLineView.fillColor = segment.color
+            
+            //Segment duration in minutes
             if let firstStop = firstStop, lastStop = lastStop {
                 cell.segmentEstimatedDurationLabel.text = lastStop.time.timeIntervalSinceDate(firstStop.time).stringValueInMinutes
             }
             
+            //Departure and arrival information
             if let firstStop = firstStop {
                 cell.segmentTimeLabel.text = "Departure at \(firstStop.time.stringValueWithHourAndMinute)"
                 
@@ -110,9 +115,13 @@ class RouteSegmentsDetailViewController: UIViewController, UITableViewDelegate, 
                 
             }
             
+            
+            //Last segment additional information
             if indexPath.row == route.segments.count-1 {
                 if let lastStop = lastStop {
                     cell.segmentFinishTimeLabel.text = "Estimated arrival at \(lastStop.time.stringValueWithHourAndMinute)"
+                    
+                    cell.segmentDetailVerticalLineView.lastSegment = true
                 }
             }
 

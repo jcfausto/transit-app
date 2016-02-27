@@ -188,6 +188,13 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZV-r8-4Qt">
+                                                    <rect key="frame" x="8" y="30" width="248" height="15"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74r-3w-PiQ">
                                                     <rect key="frame" x="277" y="4" width="35" height="21"/>
                                                     <animations/>
@@ -195,18 +202,17 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZV-r8-4Qt">
-                                                    <rect key="frame" x="8" y="30" width="173" height="15"/>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qii-Xp-48X" customClass="SegmentDetailVerticalLineView" customModule="TransitApp" customModuleProvider="target">
+                                                    <rect key="frame" x="261" y="0.0" width="13" height="90"/>
                                                     <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <animations/>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
+                                            <outlet property="segmentDetailVerticalLineView" destination="Qii-Xp-48X" id="sMs-WB-GLC"/>
                                             <outlet property="segmentEstimatedDurationLabel" destination="74r-3w-PiQ" id="2g1-OS-Qgb"/>
                                             <outlet property="segmentFinishTimeLabel" destination="yd7-7T-aFH" id="twB-aA-HQu"/>
                                             <outlet property="segmentNameLabel" destination="zZV-r8-4Qt" id="d69-a2-bf1"/>
