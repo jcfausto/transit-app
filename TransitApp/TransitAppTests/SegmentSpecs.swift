@@ -13,6 +13,51 @@ import UIKit
 
 class SegmentSpecs: QuickSpec {
     
+    //MARK: Support routines
+    
+    func createDifferentStops() -> [Stop] {
+        
+        let stopOne = Stop(name: "", latitude: 52.530227, longitude: 52.530227, time: NSDate(datetimeString: "2015-04-17T13:30:00+02:00"))
+        let stopTwo = Stop(name: "U Rosa-Luxemburg-Platz", latitude: 52.528187, longitude: 13.410404, time: NSDate(datetimeString: "2015-04-17T13:38:00+02:00"))
+        
+        return [stopOne, stopTwo]
+    }
+    
+    func createEqualStops() -> [Stop] {
+        
+        let stopOne = Stop(name: "U Rosa-Luxemburg-Platz", latitude: 52.528187, longitude: 13.410404, time: NSDate(datetimeString: "2015-04-17T13:38:00+02:00"))
+        let stopTwo = Stop(name: "U Rosa-Luxemburg-Platz", latitude: 52.528187, longitude: 13.410404, time: NSDate(datetimeString: "2015-04-17T13:38:00+02:00"))
+        
+        return [stopOne, stopTwo]
+    }
+    
+    func createSegment(withEqualStops: Bool) -> Segment {
+        let name = "Segment1"
+        let numStops = 0
+        let description = "A test segment"
+        
+        let stops: [Stop]
+        
+        switch withEqualStops{
+        case true:
+            stops = createEqualStops()
+        case false:
+            stops = createDifferentStops()
+        }
+        
+        let travelMode = "Walking"
+        
+        //Used an extension here
+        let color = UIColor(hexString: "#b1ecc")
+        
+        let iconUrl = "https://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svg"
+        let polyline = "uvr_I{yxpABuAFcAp@yHvAwNr@iGPwAh@a@jAg@"
+        
+        return Segment(name: name, numStops: numStops, description: description, stops: stops, travelMode: travelMode, color: color, iconUrl: iconUrl, polyline: polyline)
+    }
+    
+    // MARK: Specs
+    
     override func spec() {
 
         describe("Segment"){
@@ -20,25 +65,7 @@ class SegmentSpecs: QuickSpec {
             var segment: Segment!
             
             beforeEach {
-                let name = "Segment1"
-                let numStops = 0
-                let description = "A test segment"
-
-                let stop1 = Stop(name: "U Rosa-Luxemburg-Platz", latitude: 52.528187, longitude: 13.410404, time: NSDate(datetimeString: "2015-04-17T13:38:00+02:00"))
-                
-                let stop2 = Stop(name: "S+U Alexanderplatz", latitude: 52.522074, longitude: 13.413595, time: NSDate(datetimeString: "2015-04-17T13:40:00+02:00"))
-                
-                let stops = [stop1, stop2]
-            
-                let travelMode = "Walking"
-                
-                //Used an extension here
-                let color = UIColor(hexString: "#b1ecc")
-
-                let iconUrl = "https://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svg"
-                let polyline = "uvr_I{yxpABuAFcAp@yHvAwNr@iGPwAh@a@jAg@"
-                
-                segment = Segment(name: name, numStops: numStops, description: description, stops: stops, travelMode: travelMode, color: color, iconUrl: iconUrl, polyline: polyline)
+                segment = self.createSegment(false)
             }
             
             it("has a name"){
@@ -109,6 +136,11 @@ class SegmentSpecs: QuickSpec {
             
             it("has a polyline"){
                 expect(segment.polyline).to(equal("uvr_I{yxpABuAFcAp@yHvAwNr@iGPwAh@a@jAg@"))
+            }
+            
+            it("is a setup stop when has only two and this two are equal"){
+                segment = self.createSegment(true)
+                expect(segment.isSetupStop()).to(equal(true))
             }
             
         }

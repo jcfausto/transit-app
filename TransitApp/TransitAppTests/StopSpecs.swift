@@ -43,6 +43,8 @@ class StopSpecs: QuickSpec {
                 expect(stop.time).to(equal(NSDate(datetimeString: "2015-04-17T13:38:00+02:00")))
             }
             
+    
+            
         }
         
     }

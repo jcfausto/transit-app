@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Unbox
 
-struct Segment: Unboxable {
+struct Segment {
     var name: String?
     var numStops: Int
     var description: String?
@@ -32,6 +32,12 @@ struct Segment: Unboxable {
         self.iconUrl = iconUrl
         self.polyline = polyline
     }
+
+}
+
+// MARK: extensions
+
+extension Segment: Unboxable {
     
     init(unboxer: Unboxer) {
         self.name = unboxer.unbox("name")
@@ -43,6 +49,28 @@ struct Segment: Unboxable {
         self.iconUrl = unboxer.unbox("icon_url")
         self.polyline = unboxer.unbox("polyline")
     }
+}
 
+// MARK: segment's helper functions
 
+extension Segment {
+    
+    /**
+     Verifies if the segment is a segment where its stops are equal.
+     This means that this is a segmente where the person will be stopped
+     doing something like a car setup, bike picking, etc.
+     */
+    func isSetupStop() -> Bool {
+        var areEqual: Bool = false
+        
+        if (stops.count == 2) {
+            let stopOne = stops[0]
+            let stopTwo = stops[1]
+            areEqual = stopOne == stopTwo
+            return areEqual
+        }
+        
+        return areEqual
+    }
+    
 }
