@@ -37,6 +37,7 @@
 		8C9036691C80AE7300E6F985 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036681C80AE7300E6F985 /* NSTimeInterval+Extension.swift */; };
 		8C90366B1C8106D000E6F985 /* RouteSegmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90366A1C8106CF00E6F985 /* RouteSegmentsView.swift */; };
 		8C90366D1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90366C1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift */; };
+		8C9036721C81286100E6F985 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9036711C81286100E6F985 /* keys.plist */; };
 		DD82B35F14DBE3D3FAA2F4DE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD1025CE71D20E283EEAD6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		8C9036681C80AE7300E6F985 /* NSTimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		8C90366A1C8106CF00E6F985 /* RouteSegmentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegmentsView.swift; sourceTree = "<group>"; };
 		8C90366C1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegmentsDetailViewController.swift; sourceTree = "<group>"; };
+		8C9036711C81286100E6F985 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		BF86CDA0AF2FEC7952F73F0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 		8C3C7F4A1C7D0A3C00FF77EE /* TransitApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C90366E1C8127F900E6F985 /* Keys */,
 				8C3C7FB91C7E9B6900FF77EE /* Helpers */,
 				8C3C7FAA1C7E0EE300FF77EE /* Extensions */,
 				8C3C7F8F1C7D3E0700FF77EE /* Models */,
@@ -259,6 +262,14 @@
 				8C3C7FBC1C7FAD2600FF77EE /* DateFormatterHelper.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		8C90366E1C8127F900E6F985 /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				8C9036711C81286100E6F985 /* keys.plist */,
+			);
+			name = Keys;
 			sourceTree = "<group>";
 		};
 		CCDADDCA0BA16D56B9F670E5 /* Frameworks */ = {
@@ -398,6 +409,7 @@
 			files = (
 				8C3C7F561C7D0A3C00FF77EE /* LaunchScreen.storyboard in Resources */,
 				8C3C7F531C7D0A3C00FF77EE /* Assets.xcassets in Resources */,
+				8C9036721C81286100E6F985 /* keys.plist in Resources */,
 				8C3C7F7A1C7D0A6100FF77EE /* Podfile in Resources */,
 				8C3C7FB81C7E964100FF77EE /* data.json in Resources */,
 				8C3C7F511C7D0A3C00FF77EE /* Main.storyboard in Resources */,
