@@ -36,6 +36,7 @@
 		8C9036671C7FF91400E6F985 /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036661C7FF91400E6F985 /* RouteTableViewController.swift */; };
 		8C9036691C80AE7300E6F985 /* NSTimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036681C80AE7300E6F985 /* NSTimeInterval+Extension.swift */; };
 		8C90366B1C8106D000E6F985 /* RouteSegmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90366A1C8106CF00E6F985 /* RouteSegmentsView.swift */; };
+		8C90366D1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90366C1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift */; };
 		DD82B35F14DBE3D3FAA2F4DE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD1025CE71D20E283EEAD6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +75,7 @@
 		8C3C7F671C7D0A3C00FF77EE /* TransitAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3C7F6B1C7D0A3C00FF77EE /* TransitAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitAppUITests.swift; sourceTree = "<group>"; };
 		8C3C7F6D1C7D0A3C00FF77EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C3C7F791C7D0A6100FF77EE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		8C3C7F791C7D0A6100FF77EE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSpecs.swift; sourceTree = "<group>"; };
 		8C3C7FA01C7D531200FF77EE /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		8C3C7FA61C7E07BB00FF77EE /* StopSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopSpecs.swift; sourceTree = "<group>"; };
@@ -94,6 +95,7 @@
 		8C9036661C7FF91400E6F985 /* RouteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTableViewController.swift; sourceTree = "<group>"; };
 		8C9036681C80AE7300E6F985 /* NSTimeInterval+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		8C90366A1C8106CF00E6F985 /* RouteSegmentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegmentsView.swift; sourceTree = "<group>"; };
+		8C90366C1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegmentsDetailViewController.swift; sourceTree = "<group>"; };
 		BF86CDA0AF2FEC7952F73F0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +221,7 @@
 			children = (
 				8C3C7F4D1C7D0A3C00FF77EE /* ViewController.swift */,
 				8C9036661C7FF91400E6F985 /* RouteTableViewController.swift */,
+				8C90366C1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				8C9036671C7FF91400E6F985 /* RouteTableViewController.swift in Sources */,
 				8C3C7FB61C7E942F00FF77EE /* Route.swift in Sources */,
 				8C3C7FBD1C7FAD2600FF77EE /* DateFormatterHelper.swift in Sources */,
+				8C90366D1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift in Sources */,
 				8C3C7FA91C7E0D8B00FF77EE /* Stop.swift in Sources */,
 				8C3C7F4E1C7D0A3C00FF77EE /* ViewController.swift in Sources */,
 				8C3C7FA11C7D531200FF77EE /* Price.swift in Sources */,

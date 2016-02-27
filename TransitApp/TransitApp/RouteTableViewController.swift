@@ -65,7 +65,7 @@ class RouteTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RouteTableViewCell
         
-        if let route: Route = routes?.routes[indexPath.row] {
+        if let route: Route = self.routes?.routes[indexPath.row] {
             cell.routeProviderLabel.text = route.provider
             
             cell.routeSummaryLabel.text = route.summary
@@ -116,14 +116,22 @@ class RouteTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Sending the selected route to the next view
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showRouteSegments"{
+                let destinationViewController = segue.destinationViewController as! RouteSegmentsDetailViewController
+                if let row = tableView.indexPathForSelectedRow?.row {
+                    if let route: Route = self.routes?.routes[row] {
+                    destinationViewController.route = route
+                }
+            }
+            
+        }
+
     }
-    */
+    
 
 }
