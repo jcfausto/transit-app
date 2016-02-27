@@ -38,6 +38,8 @@
 		8C90366B1C8106D000E6F985 /* RouteSegmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90366A1C8106CF00E6F985 /* RouteSegmentsView.swift */; };
 		8C90366D1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C90366C1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift */; };
 		8C9036721C81286100E6F985 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C9036711C81286100E6F985 /* keys.plist */; };
+		8C9036741C812B1600E6F985 /* GoogleMapsSDKInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036731C812B1600E6F985 /* GoogleMapsSDKInitializer.swift */; };
+		8C9036761C812E5800E6F985 /* ApiKeysHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036751C812E5800E6F985 /* ApiKeysHelper.swift */; };
 		DD82B35F14DBE3D3FAA2F4DE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD1025CE71D20E283EEAD6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,8 @@
 		8C90366A1C8106CF00E6F985 /* RouteSegmentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegmentsView.swift; sourceTree = "<group>"; };
 		8C90366C1C8121BB00E6F985 /* RouteSegmentsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegmentsDetailViewController.swift; sourceTree = "<group>"; };
 		8C9036711C81286100E6F985 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+		8C9036731C812B1600E6F985 /* GoogleMapsSDKInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsSDKInitializer.swift; sourceTree = "<group>"; };
+		8C9036751C812E5800E6F985 /* ApiKeysHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeysHelper.swift; sourceTree = "<group>"; };
 		BF86CDA0AF2FEC7952F73F0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +264,8 @@
 			children = (
 				8C3C7FBA1C7E9B8C00FF77EE /* TransitAppError.swift */,
 				8C3C7FBC1C7FAD2600FF77EE /* DateFormatterHelper.swift */,
+				8C9036731C812B1600E6F985 /* GoogleMapsSDKInitializer.swift */,
+				8C9036751C812E5800E6F985 /* ApiKeysHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -560,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9036761C812E5800E6F985 /* ApiKeysHelper.swift in Sources */,
 				8C90366B1C8106D000E6F985 /* RouteSegmentsView.swift in Sources */,
 				8C3C7FAC1C7E0EF800FF77EE /* NSDate+Extension.swift in Sources */,
 				8C9036651C7FF64400E6F985 /* RouteTableViewCell.swift in Sources */,
@@ -574,6 +581,7 @@
 				8C3C7F4E1C7D0A3C00FF77EE /* ViewController.swift in Sources */,
 				8C3C7FA11C7D531200FF77EE /* Price.swift in Sources */,
 				8C3C7F4C1C7D0A3C00FF77EE /* AppDelegate.swift in Sources */,
+				8C9036741C812B1600E6F985 /* GoogleMapsSDKInitializer.swift in Sources */,
 				8C3C7FBB1C7E9B8C00FF77EE /* TransitAppError.swift in Sources */,
 				8C3C7FB21C7E846E00FF77EE /* UIColor+Extension.swift in Sources */,
 			);

@@ -56,6 +56,34 @@ class TransitAppTests: XCTestCase {
         let interval: NSTimeInterval = 6000
         XCTAssertEqual(interval.stringValueInMinutes, "40 min")
     }
+    
+    /**
+    Testing if google maps SKD could be initialized properly
+    */
+    func testCanInitializeGoogleMapsSdkWhenApiKeyIsProvided(){
+        if let key = ApiKeysHelper.sharedInstance.getGoogleMapsSdkApiKey() {
+            if !key.isEmpty {
+                let gmapsSdk = GoogleMapsSDKInitializer()
+                gmapsSdk.doSetup()
+                XCTAssertTrue(gmapsSdk.state)
+            }
+        } else {
+            XCTAssertTrue(true)
+        }
+    }
+    
+    func testFailToInitializeGoogleMapsSdkWhenApiKeyIsNotProvided(){
+        if let key = ApiKeysHelper.sharedInstance.getGoogleMapsSdkApiKey() {
+            if key.isEmpty {
+                let gmapsSdk = GoogleMapsSDKInitializer()
+                gmapsSdk.doSetup()
+                XCTAssertFalse(gmapsSdk.state)
+            }
+        } else {
+            XCTAssertFalse(false)
+        }
+
+    }
 
     
 }
