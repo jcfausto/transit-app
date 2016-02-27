@@ -29,7 +29,7 @@ class ApiKeysHelper {
      The key could not be present or informed in the dictionary
     */
     func getGoogleMapsSdkApiKey() -> String? {
-        if let keys = keys {
+        if let keys = self.keys {
            return keys["googleMapsApiKey"] as? String
         }
         
