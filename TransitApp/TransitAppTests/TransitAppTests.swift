@@ -122,6 +122,49 @@ class TransitAppTests: XCTestCase {
         
         //XCTAssertEqual(coordinateOne.latitude, 52.528187)
     }
+    
+    /**
+     Tests the SVGIconCache object
+     */
+    func testCanStoreSVGDataToSVGCache() {
+        let svgUrl = "https://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svg"
+        let expectation = expectationWithDescription("Execute async task")
+        
+        if let url = NSURL(string: svgUrl) {
+            
+            let resourceName = url.lastPathComponent
+        
+            let request = NSURLRequest(URL: url)
+         
+            let downloadTask = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
+                
+                if let svgData = data as NSData? {
+                    
+                    let cache = SVGIconCache()
+                    cache.saveSVG(svgData, fileName: resourceName!)
+                    
+                    let cachedData = cache.retrieveSVG(resourceName!)
+                    
+                    if let cachedData = cachedData {
+                        XCTAssertTrue(svgData.isEqualToData(cachedData))
+                    } else {
+                        XCTFail("It was not possible to use the SVG cache properly")
+                    }
+                    
+                }
+                
+                expectation.fulfill()
+            }
+            
+            downloadTask.resume()
+            
+        } else {
+            XCTFail("Error trying to convert the SVG url")
+        }
+        
+        waitForExpectationsWithTimeout(5.0, handler:nil)
+        
+    }
 
     
 }

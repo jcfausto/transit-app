@@ -45,6 +45,7 @@
 		8C9036811C8252AC00E6F985 /* RouteSegmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036801C8252AC00E6F985 /* RouteSegmentButton.swift */; };
 		8C9036831C828D9A00E6F985 /* smalldata.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C9036821C828D9A00E6F985 /* smalldata.json */; };
 		8C9036861C829B7200E6F985 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036851C829B7200E6F985 /* DataProvider.swift */; };
+		8C9036891C832E1700E6F985 /* SVGIconCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9036881C832E1700E6F985 /* SVGIconCache.swift */; };
 		DD82B35F14DBE3D3FAA2F4DE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD1025CE71D20E283EEAD6 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +113,7 @@
 		8C9036801C8252AC00E6F985 /* RouteSegmentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSegmentButton.swift; sourceTree = "<group>"; };
 		8C9036821C828D9A00E6F985 /* smalldata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = smalldata.json; sourceTree = "<group>"; };
 		8C9036851C829B7200E6F985 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		8C9036881C832E1700E6F985 /* SVGIconCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVGIconCache.swift; sourceTree = "<group>"; };
 		BF86CDA0AF2FEC7952F73F0E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransitAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +175,7 @@
 		8C3C7F4A1C7D0A3C00FF77EE /* TransitApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C9036871C832DF400E6F985 /* Caching */,
 				8C9036841C829B4E00E6F985 /* Dataservice */,
 				8C90367B1C82250600E6F985 /* Components */,
 				8C90366E1C8127F900E6F985 /* Keys */,
@@ -307,6 +310,14 @@
 				8C9036851C829B7200E6F985 /* DataProvider.swift */,
 			);
 			name = Dataservice;
+			sourceTree = "<group>";
+		};
+		8C9036871C832DF400E6F985 /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				8C9036881C832E1700E6F985 /* SVGIconCache.swift */,
+			);
+			name = Caching;
 			sourceTree = "<group>";
 		};
 		CCDADDCA0BA16D56B9F670E5 /* Frameworks */ = {
@@ -602,6 +613,7 @@
 				8C90366B1C8106D000E6F985 /* RouteSegmentsView.swift in Sources */,
 				8C9036781C813A6700E6F985 /* RouteSegmentsDetailTableViewCell.swift in Sources */,
 				8C3C7FAC1C7E0EF800FF77EE /* NSDate+Extension.swift in Sources */,
+				8C9036891C832E1700E6F985 /* SVGIconCache.swift in Sources */,
 				8C90367D1C82255800E6F985 /* SegmentDetailVerticalLineView.swift in Sources */,
 				8C9036811C8252AC00E6F985 /* RouteSegmentButton.swift in Sources */,
 				8C9036651C7FF64400E6F985 /* RouteTableViewCell.swift in Sources */,
