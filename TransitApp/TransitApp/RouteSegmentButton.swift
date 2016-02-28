@@ -39,12 +39,48 @@ class RouteSegmentButton: UIButton {
     */
     @IBInspectable var index: Int = 0
     
+    /**
+     The SVG cache manager
+     */
+    let cache = SVGIconCache()
+    
+    
+    func retrieveSvgFromCache(stringUrl: NSURL) -> NSData? {
+        if let fileName = stringUrl.lastPathComponent {
+            return cache.retrieveSVG(fileName)
+        } else {
+            return nil
+        }
+    }
     
     // MARK: Custom Draw
     
     override func drawRect(rect: CGRect) {
+        if let svgIconUrl = self.svgIconUrl {
+            
+            //This must be done in background because of the relationship with the SVGCache that sometimes
+            //will perform a file read from the disk and if this occurs in the main thread the UI will block
+            //until the file finishes loading
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
+                
+                let svgData = self.retrieveSvgFromCache(svgIconUrl)
+                
+                if let svgData = svgData {
+                    self.drawSvg(svgData, rect: rect)
+                } else {
+                    self.loadAndDrawSvgForTheFirstTime(svgIconUrl, rect: rect)
+                }
+            }
+            
+        }
+    }
+    
+    
+    // MARK: SVG Drawing
+    
+    func loadAndDrawSvgForTheFirstTime(svgIconUrl: NSURL, rect: CGRect) {
         
-        if let svgIconUrl = svgIconUrl {
+        if let svgIconUrl: NSURL = svgIconUrl {
             
             let request = NSURLRequest(URL: svgIconUrl)
             
@@ -52,54 +88,58 @@ class RouteSegmentButton: UIButton {
             let getSvgResourceTask = NSURLSession.sharedSession().dataTaskWithRequest(request){ data, response, error in
                 
                 if let svgData = data as NSData? {
-                    
-                    let svgSource = SVGKSource(inputSteam: NSInputStream(data: svgData))
-                    let svgParsed = SVGKParser.parseSourceUsingDefaultSVGKParser(svgSource)
-                    let svgImage = SVGKImage(parsedSVG: svgParsed, fromSource: svgSource)
-                    
-                    //Fill the SVG sublayers with the segment color
-                    let svgImageView = SVGKLayeredImageView(SVGKImage: svgImage)
-                    let layer = svgImageView.layer
-                    self.changeFillColorRecursively(layer.sublayers!, color: self.fillColor!)
-
-                    if let image = svgImage.UIImage {
-                        
-                        //Creates a context with the same size of the button's frame
-                        UIGraphicsBeginImageContextWithOptions(CGSize(width: rect.size.width, height: rect.size.height), false, 0)
-                        
-                        //Get the contexts that we just created
-                        let context = UIGraphicsGetCurrentContext()
-                        
-                        //Setting the paths and configs.
-                        CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
-                        CGContextSetStrokeColorWithColor(context, UIColor.blackColor().CGColor)
-    
-                        //Draw the image in the button's rect
-                        image.drawInRect(rect)
-                        
-                        //Tell the context to draw
-                        CGContextDrawPath(context, .FillStroke)
-                        
-                        //Get the image drawed into the context
-                        let img = UIGraphicsGetImageFromCurrentImageContext()
-                        
-                        //Ends the context
-                        UIGraphicsEndImageContext()
-                        
-                        //Sets the image into the buttom asynchronously
-                        dispatch_async(dispatch_get_main_queue(), {
-                            self.setImage(img, forState: .Normal)
-                        });
+                    if let fileName = svgIconUrl.lastPathComponent {
+                        self.cache.saveSVG(svgData, fileName: fileName)
                     }
-                    
-
+                   
+                    self.drawSvg(svgData, rect: rect)
                 }
             }
             
             getSvgResourceTask.resume()
-            
         }
-
+        
+    }
+    
+    func drawSvg(svgData: NSData, rect: CGRect) {
+        let svgSource = SVGKSource(inputSteam: NSInputStream(data: svgData))
+        let svgParsed = SVGKParser.parseSourceUsingDefaultSVGKParser(svgSource)
+        let svgImage = SVGKImage(parsedSVG: svgParsed, fromSource: svgSource)
+        
+        //Fill the SVG sublayers with the segment color
+        let svgImageView = SVGKLayeredImageView(SVGKImage: svgImage)
+        let layer = svgImageView.layer
+        self.changeFillColorRecursively(layer.sublayers!, color: self.fillColor!)
+        
+        if let image = svgImage.UIImage {
+            
+            //Creates a context with the same size of the button's frame
+            UIGraphicsBeginImageContextWithOptions(CGSize(width: rect.size.width, height: rect.size.height), false, 0)
+            
+            //Get the contexts that we just created
+            let context = UIGraphicsGetCurrentContext()
+            
+            //Setting the paths and configs.
+            CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
+            CGContextSetStrokeColorWithColor(context, UIColor.blackColor().CGColor)
+            
+            //Draw the image in the button's rect
+            image.drawInRect(rect)
+            
+            //Tell the context to draw
+            CGContextDrawPath(context, .FillStroke)
+            
+            //Get the image drawed into the context
+            let img = UIGraphicsGetImageFromCurrentImageContext()
+            
+            //Ends the context
+            UIGraphicsEndImageContext()
+            
+            //Sets the image into the buttom asynchronously
+            dispatch_async(dispatch_get_main_queue(), {
+                self.setImage(img, forState: .Normal)
+            });
+        }
     }
     
     // MARK: SVG color fill

@@ -128,7 +128,7 @@ class TransitAppTests: XCTestCase {
      */
     func testCanStoreSVGDataToSVGCache() {
         let svgUrl = "https://d3m2tfu2xpiope.cloudfront.net/vehicles/walking.svg"
-        let expectation = expectationWithDescription("Execute async task")
+        let expectation = expectationWithDescription("testCanStoreSVGDataToSVGCache")
         
         if let url = NSURL(string: svgUrl) {
             
@@ -146,7 +146,8 @@ class TransitAppTests: XCTestCase {
                     let cachedData = cache.retrieveSVG(resourceName!)
                     
                     if let cachedData = cachedData {
-                        XCTAssertTrue(svgData.isEqualToData(cachedData))
+                        let equalData = svgData.isEqualToData(cachedData)
+                        XCTAssertTrue(equalData)
                     } else {
                         XCTFail("It was not possible to use the SVG cache properly")
                     }
@@ -162,7 +163,7 @@ class TransitAppTests: XCTestCase {
             XCTFail("Error trying to convert the SVG url")
         }
         
-        waitForExpectationsWithTimeout(5.0, handler:nil)
+        waitForExpectationsWithTimeout(10.0, handler:nil)
         
     }
 
