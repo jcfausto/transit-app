@@ -23,7 +23,3 @@ end
 target 'TransitAppTests' do
     testing_pods
 end
-
-target 'TransitAppUITests' do
-    testing_pods
-end
