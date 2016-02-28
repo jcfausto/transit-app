@@ -257,6 +257,7 @@
                         <outlet property="routeDurationLabel" destination="uzK-c5-NYc" id="2sN-kf-tqO"/>
                         <outlet property="routeSegmentsView" destination="Z1j-Rz-279" id="KIe-n7-yR3"/>
                         <outlet property="routeSummaryLabel" destination="mAn-kt-V1o" id="Q09-oD-aAj"/>
+                        <outlet property="segmentsTableView" destination="w3C-kY-XXG" id="8Yv-ck-DU5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIU-Gb-FwM" userLabel="First Responder" sceneMemberID="firstResponder"/>

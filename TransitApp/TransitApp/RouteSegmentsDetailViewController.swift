@@ -23,7 +23,9 @@ class RouteSegmentsDetailViewController: UIViewController, UITableViewDelegate, 
     @IBOutlet weak var routeSegmentsView: RouteSegmentsView!
     @IBOutlet weak var routeDurationLabel: UILabel!
     @IBOutlet weak var routeSummaryLabel: UILabel!
+    @IBOutlet weak var segmentsTableView: UITableView!
     
+    // MARK: Initialization
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +34,19 @@ class RouteSegmentsDetailViewController: UIViewController, UITableViewDelegate, 
         
         initMapView(self)
         
+        // Observers
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"performSegmentSelection:", name: "RSVButtonTapped", object: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: Deinitialization
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     // MARK: TableView protocols compliance
@@ -222,6 +232,23 @@ extension RouteSegmentsDetailViewController {
             }
             
         }
+    }
+    
+    /**
+     This method will be invoked every time that the RouteSegmentsView notify for an 
+     RSVButtonTapped event
+     */
+    func performSegmentSelection(notification: NSNotification) {
+        
+        let userInfo = notification.userInfo as! [String: AnyObject]
+        let button = userInfo["button"] as! RouteSegmentButton?
+        
+        if let button = button {
+            let indexPath = NSIndexPath(forRow: button.index, inSection: 0)
+            self.segmentsTableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+            self.tableView(self.segmentsTableView, didSelectRowAtIndexPath: indexPath)
+        }
+        
     }
     
 }

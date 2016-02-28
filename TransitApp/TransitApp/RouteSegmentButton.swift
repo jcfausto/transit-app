@@ -19,6 +19,8 @@ import SVGKit
 @IBDesignable
 class RouteSegmentButton: UIButton {
 
+    // MARK: Properties
+    
     /**
      The shape's icon url. If presente, this icon 
      will be drawed into the button
@@ -30,24 +32,16 @@ class RouteSegmentButton: UIButton {
      */
     @IBInspectable var fillColor: UIColor?
     
+    /**
+     This button is designed primarily to be placed inside a view that
+     will contain a collection of this buttons. This property can store
+     a index refecence indicating in wich index it resides inside a collection
+    */
+    @IBInspectable var index: Int = 0
     
-    //It was necessary to use this workarround to fill the layers with the segment color
-    //https://github.com/SVGKit/SVGKit/issues/98
-    func changeFillColorRecursively(sublayers: [CALayer], color: UIColor) {
-        for layer in sublayers {
-            
-            if let l = layer as? CAShapeLayer {
-                l.fillColor = color.CGColor
-            }
-            
-            if let l: CALayer = layer, sub = l.sublayers {
-                changeFillColorRecursively(sub, color: color)
-            }
-            
-        }
-    }
     
-    // Overriding for drawing the SVG icons into the buttons.
+    // MARK: Custom Draw
+    
     override func drawRect(rect: CGRect) {
         
         if let svgIconUrl = svgIconUrl {
@@ -106,6 +100,24 @@ class RouteSegmentButton: UIButton {
             
         }
 
+    }
+    
+    // MARK: SVG color fill
+    
+    //It was necessary to use this workarround to fill the layers with the segment color
+    //https://github.com/SVGKit/SVGKit/issues/98
+    func changeFillColorRecursively(sublayers: [CALayer], color: UIColor) {
+        for layer in sublayers {
+            
+            if let l = layer as? CAShapeLayer {
+                l.fillColor = color.CGColor
+            }
+            
+            if let l: CALayer = layer, sub = l.sublayers {
+                changeFillColorRecursively(sub, color: color)
+            }
+            
+        }
     }
     
 

@@ -32,6 +32,9 @@ class RouteSegmentsView: UIView {
                         segmentButtom.fillColor = segment.color
                         segmentButtom.svgIconUrl = NSURL(string: segment.iconUrl)
                         segmentButtons += [segmentButtom]
+                        //Store the index to be used later to identify the button in the tap action
+                        segmentButtom.index = segmentButtons.count-1
+                        segmentButtom.addTarget(self, action: "segmentButtonTapped:", forControlEvents: .TouchDown)
                         addSubview(segmentButtom)
                     }
                 }
@@ -81,6 +84,13 @@ class RouteSegmentsView: UIView {
         
         //Resetting segments
         self.segments?.removeAll()
+    }
+    
+    // MARK: button tap action
+    
+    func segmentButtonTapped(button: RouteSegmentButton) {
+        //Setting up and a notification to be watched by observers
+        NSNotificationCenter.defaultCenter().postNotificationName("RSVButtonTapped", object: self, userInfo: ["button":button])
     }
     
 

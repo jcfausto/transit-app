@@ -42,8 +42,6 @@ class RouteTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "RouteTableViewCell"
         
-        print(indexPath)
-        
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RouteTableViewCell
         
         if let route: Route = self.routes?.routes[indexPath.row] {
