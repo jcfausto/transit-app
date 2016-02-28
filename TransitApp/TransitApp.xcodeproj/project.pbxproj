@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C92D78838E5769F8FCFF2A8 /* Pods_TransitAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D2E67A1D2097712182AC50 /* Pods_TransitAppUITests.framework */; };
 		220BD7B1187DF12FC6145466 /* Pods_TransitAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71628331BBCC9BE26047CE6 /* Pods_TransitAppTests.framework */; };
 		8C3C7F4C1C7D0A3C00FF77EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F4B1C7D0A3C00FF77EE /* AppDelegate.swift */; };
 		8C3C7F4E1C7D0A3C00FF77EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F4D1C7D0A3C00FF77EE /* ViewController.swift */; };
@@ -57,13 +56,6 @@
 			remoteGlobalIDString = 8C3C7F471C7D0A3C00FF77EE;
 			remoteInfo = TransitApp;
 		};
-		8C3C7F681C7D0A3C00FF77EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8C3C7F401C7D0A3C00FF77EE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8C3C7F471C7D0A3C00FF77EE;
-			remoteInfo = TransitApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +73,6 @@
 		8C3C7F5C1C7D0A3C00FF77EE /* TransitAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3C7F601C7D0A3C00FF77EE /* TransitAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitAppTests.swift; sourceTree = "<group>"; };
 		8C3C7F621C7D0A3C00FF77EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C3C7F671C7D0A3C00FF77EE /* TransitAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3C7F791C7D0A6100FF77EE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSpecs.swift; sourceTree = "<group>"; };
 		8C3C7FA01C7D531200FF77EE /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
@@ -137,14 +128,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C3C7F641C7D0A3C00FF77EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C92D78838E5769F8FCFF2A8 /* Pods_TransitAppUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -165,7 +148,6 @@
 			children = (
 				8C3C7F481C7D0A3C00FF77EE /* TransitApp.app */,
 				8C3C7F5C1C7D0A3C00FF77EE /* TransitAppTests.xctest */,
-				8C3C7F671C7D0A3C00FF77EE /* TransitAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -377,26 +359,6 @@
 			productReference = 8C3C7F5C1C7D0A3C00FF77EE /* TransitAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8C3C7F661C7D0A3C00FF77EE /* TransitAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8C3C7F761C7D0A3C00FF77EE /* Build configuration list for PBXNativeTarget "TransitAppUITests" */;
-			buildPhases = (
-				290A30C6D45884C193AAC9BF /* Check Pods Manifest.lock */,
-				8C3C7F631C7D0A3C00FF77EE /* Sources */,
-				8C3C7F641C7D0A3C00FF77EE /* Frameworks */,
-				8C3C7F651C7D0A3C00FF77EE /* Resources */,
-				D91FC70E9B1FA8983261AD69 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8C3C7F691C7D0A3C00FF77EE /* PBXTargetDependency */,
-			);
-			name = TransitAppUITests;
-			productName = TransitAppUITests;
-			productReference = 8C3C7F671C7D0A3C00FF77EE /* TransitAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -411,10 +373,6 @@
 						CreatedOnToolsVersion = 7.1;
 					};
 					8C3C7F5B1C7D0A3C00FF77EE = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = 8C3C7F471C7D0A3C00FF77EE;
-					};
-					8C3C7F661C7D0A3C00FF77EE = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = 8C3C7F471C7D0A3C00FF77EE;
 					};
@@ -435,7 +393,6 @@
 			targets = (
 				8C3C7F471C7D0A3C00FF77EE /* TransitApp */,
 				8C3C7F5B1C7D0A3C00FF77EE /* TransitAppTests */,
-				8C3C7F661C7D0A3C00FF77EE /* TransitAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -462,31 +419,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C3C7F651C7D0A3C00FF77EE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		290A30C6D45884C193AAC9BF /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		99EF37921CADF95D73CFA6DF /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -562,21 +497,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransitAppTests/Pods-TransitAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D91FC70E9B1FA8983261AD69 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransitAppUITests/Pods-TransitAppUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F44B7DB1C11240EB4CB3D9C5 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,13 +559,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C3C7F631C7D0A3C00FF77EE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -653,11 +566,6 @@
 			isa = PBXTargetDependency;
 			target = 8C3C7F471C7D0A3C00FF77EE /* TransitApp */;
 			targetProxy = 8C3C7F5D1C7D0A3C00FF77EE /* PBXContainerItemProxy */;
-		};
-		8C3C7F691C7D0A3C00FF77EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8C3C7F471C7D0A3C00FF77EE /* TransitApp */;
-			targetProxy = 8C3C7F681C7D0A3C00FF77EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -812,32 +720,6 @@
 			};
 			name = Release;
 		};
-		8C3C7F771C7D0A3C00FF77EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFE16F3E2767F3CF19B534B9 /* Pods-TransitAppUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = TransitAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ludworks.TransitAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = TransitApp;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		8C3C7F781C7D0A3C00FF77EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00605D034E2E639AD9A178EB /* Pods-TransitAppUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = TransitAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ludworks.TransitAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = TransitApp;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -864,15 +746,6 @@
 			buildConfigurations = (
 				8C3C7F741C7D0A3C00FF77EE /* Debug */,
 				8C3C7F751C7D0A3C00FF77EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8C3C7F761C7D0A3C00FF77EE /* Build configuration list for PBXNativeTarget "TransitAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8C3C7F771C7D0A3C00FF77EE /* Debug */,
-				8C3C7F781C7D0A3C00FF77EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
