@@ -27,5 +27,12 @@ class RouteTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        //It is necessary to prepare the custom view to reuse too.
+        routeSegmentsView.prepareForReuse()
+    }
 
 }

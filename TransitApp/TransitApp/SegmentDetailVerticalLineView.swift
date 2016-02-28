@@ -67,15 +67,15 @@ class SegmentDetailVerticalLineView: UIView {
         //draw the stroke
         linePath.stroke()
         
-        // MARK: Drawing the oval shape at the bottom
+        // MARK: Drawing the circle shape at the bottom
         
         let ovalRect = CGRect(x: 0, y: bounds.height-15, width: bounds.width, height: 15)
         
         let path = UIBezierPath(ovalInRect: ovalRect)
+        
         fillColor.setFill()
+        
         path.fill()
-
+        
     }
-
-
 }

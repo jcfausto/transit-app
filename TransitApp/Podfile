@@ -11,6 +11,9 @@ pod 'Unbox'
 pod 'GoogleMaps'
 pod 'Polyline', '~> 3.0'
 
+# For SVG processing
+pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '2.x'
+
 # For testing
 def testing_pods
     pod 'Quick', '~> 0.9.0'

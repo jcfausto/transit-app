@@ -1,8 +1,18 @@
 PODS:
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
   - GoogleMaps (1.12.2)
   - Nimble (3.0.0)
   - Polyline (3.0.0)
   - Quick (0.9.1)
+  - SVGKit (2.x):
+    - CocoaLumberjack (~> 2.x)
   - Unbox (1.3.1)
 
 DEPENDENCIES:
@@ -10,13 +20,26 @@ DEPENDENCIES:
   - Nimble (= 3.0.0)
   - Polyline (~> 3.0)
   - Quick (~> 0.9.0)
+  - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `2.x`)
   - Unbox
 
+EXTERNAL SOURCES:
+  SVGKit:
+    :branch: 2.x
+    :git: https://github.com/SVGKit/SVGKit.git
+
+CHECKOUT OPTIONS:
+  SVGKit:
+    :commit: 9dbe522b322a824ba4218b51034a807335b35977
+    :git: https://github.com/SVGKit/SVGKit.git
+
 SPEC CHECKSUMS:
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   GoogleMaps: cc76edaa94a4284e80ecd7089ed319d1cca5f37e
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Polyline: 18026fd6675f754a15e70b4fd7ca01d0d156b6d7
   Quick: a5221fc21788b6aeda934805e68b061839bc3165
+  SVGKit: 199cfcfd5558377b8f18a9a73439eb4cbc412014
   Unbox: b6e468b47b5d941b197c1ea53e9c179528b454ed
 
 COCOAPODS: 0.39.0

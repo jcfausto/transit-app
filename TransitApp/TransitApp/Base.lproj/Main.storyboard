@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvP-01-Mag">
-                                <rect key="frame" x="208" y="277" width="184" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvP-01-Mag">
+                                <rect key="frame" x="229" y="282" width="142" height="36"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Available routes"/>
@@ -47,7 +47,6 @@
         <!--AvailableRoutesViewController-->
         <scene sceneID="1Lm-k1-wuH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zzm-Ze-jIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="AvailableRoutesViewController" id="iMo-xe-j0O" customClass="RouteTableViewController" customModule="TransitApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="a5Q-LP-r6f">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -110,6 +109,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="GNa-oN-I8l"/>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zzm-Ze-jIZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="969" y="552"/>
         </scene>
@@ -161,7 +161,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RouteSegmentsDetailTableViewCell" rowHeight="90" id="jdp-hC-t26" customClass="RouteSegmentsDetailTableViewCell" customModule="TransitApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="90"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jdp-hC-t26" id="fnm-ka-iL3">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
@@ -263,10 +263,10 @@
             </objects>
             <point key="canvasLocation" x="1694" y="552"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--MainNavigationViewController-->
         <scene sceneID="m04-Ja-HQs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eoh-OV-UGZ" sceneMemberID="viewController">
+                <navigationController title="MainNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="Eoh-OV-UGZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UoB-LJ-NmC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -282,27 +282,5 @@
             </objects>
             <point key="canvasLocation" x="293" y="-169"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="VVo-nm-7x7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OQl-J3-xaA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HZz-lv-TR1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0rI-TB-pZ7" kind="relationship" relationship="rootViewController" id="zlg-py-lNV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="96Q-bE-lxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1694" y="-169"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ebu-Q7-JJi"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,14 @@ class RouteSegmentsView: UIView {
     // MARK: Properties
     var spacing = 5
     
+    var segmentButtons = [UIButton]()
+    
+    /**
+     This is a computed var for segments. When the segment for 
+     the cell that is being created in the table view controller was
+     set, this view prepares its content by adding the subviews that
+     representing each segment.
+     */
     var segments: [Segment]? {
         
         didSet {
@@ -20,8 +28,9 @@ class RouteSegmentsView: UIView {
                 if segmentButtons.isEmpty {
                     for segment: Segment in segments {
                         
-                        let segmentButtom = UIButton()
-                        segmentButtom.backgroundColor = segment.color
+                        let segmentButtom = RouteSegmentButton()
+                        segmentButtom.fillColor = segment.color
+                        segmentButtom.svgIconUrl = NSURL(string: segment.iconUrl)
                         segmentButtons += [segmentButtom]
                         addSubview(segmentButtom)
                     }
@@ -29,13 +38,9 @@ class RouteSegmentsView: UIView {
 
             }
             
-            
             setNeedsLayout()
         }
     }
-    
-    var segmentButtons = [UIButton]()
-    
 
     // MARK: initialization
     
@@ -43,8 +48,9 @@ class RouteSegmentsView: UIView {
         super.init(coder: aDecoder)
     }
     
+    
     override func layoutSubviews() {
-        // Set the button's width and height to a square the size of the frame's height.
+        // Set the button's width and height
         let buttonSize = Int(frame.size.height)
         var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
         
@@ -54,19 +60,28 @@ class RouteSegmentsView: UIView {
             button.frame = buttonFrame
         }
     }
+
+    // MARK: Custom methods
     
-    override func intrinsicContentSize() -> CGSize {
-        let buttonSize = Int(frame.size.height)
-        var width = (buttonSize + spacing)
+    /**
+    It is necessary to remove all the subviews (buttons)that was
+    used in the cell that was recycled in order to not experience
+    painting erros in the view. If this cleanup doesn't occur when 
+    the user scrolls the table the icons will sometimes be wrong.
+    */
+    func prepareForReuse() -> Void {
         
-        if let segments = self.segments {
-            width = ((buttonSize + spacing) * (segments.count))
+        //Removing unused subviews.
+        for buttom in segmentButtons {
+            buttom.removeFromSuperview()
         }
         
-        return CGSize(width: width, height: buttonSize)
+        //Resetting buttons reference
+        segmentButtons.removeAll()
+        
+        //Resetting segments
+        self.segments?.removeAll()
     }
-    
-    // MARK: Custom methods
     
 
 }

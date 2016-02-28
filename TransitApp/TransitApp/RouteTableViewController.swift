@@ -18,31 +18,11 @@ class RouteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
         loadRoutesFakeData()
     }
     
-    
-    /**
-    Loads the JSON data. THIS METHOD MUST BE REFACTORED TO A SERVICE LAYER
-    */
-    func loadRoutesFakeData() {
-        if let dataPath = NSBundle.mainBundle().pathForResource("data", ofType: "json") {
-            if let data = NSData(contentsOfFile: dataPath) {
-                self.routes = Unbox(data)
-            }
-        }
-
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -58,10 +38,11 @@ class RouteTableViewController: UITableViewController {
             return 0
         }
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "RouteTableViewCell"
+        
+        print(indexPath)
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RouteTableViewCell
         
@@ -76,62 +57,42 @@ class RouteTableViewController: UITableViewController {
             cell.routeSegmentsView.segments = route.segments
         }
 
-
-
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
     // MARK: - Navigation
 
     // Sending the selected route to the next view
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showRouteSegments"{
-                let destinationViewController = segue.destinationViewController as! RouteSegmentsDetailViewController
-                if let row = tableView.indexPathForSelectedRow?.row {
-                    if let route: Route = self.routes?.routes[row] {
-                    destinationViewController.route = route
-                }
+            if let row = tableView.indexPathForSelectedRow?.row {
+                self.sendCurrentRouteToSegue(row, segue: segue)
             }
-            
         }
+    }
+}
 
+
+// MARK: Custom methods
+
+extension RouteTableViewController {
+    
+    /**
+     Sends the current route (associated with the selected cell) to a segue
+     */
+    func sendCurrentRouteToSegue(routeIndex: Int, segue: UIStoryboardSegue) {
+        let destinationViewController = segue.destinationViewController as! RouteSegmentsDetailViewController
+        if let route: Route = self.routes?.routes[routeIndex] {
+            destinationViewController.route = route
+        }
     }
     
-
+    /**
+     Loads the JSON data. THIS METHOD MUST BE REFACTORED TO A SERVICE LAYER
+     */
+    func loadRoutesFakeData() {
+        let dataProvider = DataProvider()
+        self.routes = dataProvider.searchForRoutes()
+    }
+    
 }
