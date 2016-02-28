@@ -8,7 +8,7 @@ An iOS swift app that shows route information and plots the route on a map. It w
 
 ## Prerequisite
 
-- A google maps iOS sdk key. The application already have one in place but it will only work until March 4th 2016. After that you will need to create one. you can get one here: [https://developers.google.com/maps/documentation/ios-sdk/get-api-key](https://developers.google.com/maps/documentation/ios-sdk/get-api-key)
+- A google maps iOS sdk key. The application already have one in place but it will only work until March 4th 2016. After that you will need to create one. you can get one here: [https://developers.google.com/maps/documentation/ios-sdk/get-api-key](https://developers.google.com/maps/documentation/ios-sdk/get-api-key). The key must be informed at Keys/keys.plist file.
 - cocoapods gem installed
   - ```$ sudo gem install cocoapods```
 
@@ -51,3 +51,7 @@ $ open TransitApp/TransitApp.xcworkspace/
 ![Alt text](screenshots/routes.png "Available routes")
 ![Alt text](screenshots/route-segments.png "Route details")
 ![Alt text](screenshots/route-segments2.png "Route details 2")
+
+# Licence
+
+This is an study project, so feel free to use.
