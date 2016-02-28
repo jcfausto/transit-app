@@ -15,7 +15,6 @@
 		8C3C7F531C7D0A3C00FF77EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C3C7F521C7D0A3C00FF77EE /* Assets.xcassets */; };
 		8C3C7F561C7D0A3C00FF77EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C3C7F541C7D0A3C00FF77EE /* LaunchScreen.storyboard */; };
 		8C3C7F611C7D0A3C00FF77EE /* TransitAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F601C7D0A3C00FF77EE /* TransitAppTests.swift */; };
-		8C3C7F6C1C7D0A3C00FF77EE /* TransitAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F6B1C7D0A3C00FF77EE /* TransitAppUITests.swift */; };
 		8C3C7F7A1C7D0A6100FF77EE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8C3C7F791C7D0A6100FF77EE /* Podfile */; };
 		8C3C7F9F1C7D521800FF77EE /* PriceSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */; };
 		8C3C7FA11C7D531200FF77EE /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3C7FA01C7D531200FF77EE /* Price.swift */; };
@@ -83,8 +82,6 @@
 		8C3C7F601C7D0A3C00FF77EE /* TransitAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitAppTests.swift; sourceTree = "<group>"; };
 		8C3C7F621C7D0A3C00FF77EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C3C7F671C7D0A3C00FF77EE /* TransitAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransitAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C3C7F6B1C7D0A3C00FF77EE /* TransitAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitAppUITests.swift; sourceTree = "<group>"; };
-		8C3C7F6D1C7D0A3C00FF77EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C3C7F791C7D0A6100FF77EE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8C3C7F9E1C7D521800FF77EE /* PriceSpecs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceSpecs.swift; sourceTree = "<group>"; };
 		8C3C7FA01C7D531200FF77EE /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
@@ -156,7 +153,6 @@
 			children = (
 				8C3C7F4A1C7D0A3C00FF77EE /* TransitApp */,
 				8C3C7F5F1C7D0A3C00FF77EE /* TransitAppTests */,
-				8C3C7F6A1C7D0A3C00FF77EE /* TransitAppUITests */,
 				8C3C7F491C7D0A3C00FF77EE /* Products */,
 				8C3C7F791C7D0A6100FF77EE /* Podfile */,
 				E286B849A298AB0275EAF1DA /* Pods */,
@@ -206,15 +202,6 @@
 				8C3C7F621C7D0A3C00FF77EE /* Info.plist */,
 			);
 			path = TransitAppTests;
-			sourceTree = "<group>";
-		};
-		8C3C7F6A1C7D0A3C00FF77EE /* TransitAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8C3C7F6B1C7D0A3C00FF77EE /* TransitAppUITests.swift */,
-				8C3C7F6D1C7D0A3C00FF77EE /* Info.plist */,
-			);
-			path = TransitAppUITests;
 			sourceTree = "<group>";
 		};
 		8C3C7F8F1C7D3E0700FF77EE /* Models */ = {
@@ -656,7 +643,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C3C7F6C1C7D0A3C00FF77EE /* TransitAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
