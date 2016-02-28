@@ -52,6 +52,6 @@ $ open TransitApp/TransitApp.xcworkspace/
 ![Alt text](screenshots/route-segments.png "Route details")
 ![Alt text](screenshots/route-segments2.png "Route details 2")
 
-# Licence
+# License
 
 This is a study project, so feel free to use it.
