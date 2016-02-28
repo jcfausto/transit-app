@@ -143,6 +143,11 @@ class SegmentSpecs: QuickSpec {
                 expect(segment.isSetupStop()).to(equal(true))
             }
             
+            it("is not a setup stop when has only two and this two are not equal"){
+                segment = self.createSegment(false)
+                expect(segment.isSetupStop()).to(equal(false))
+            }
+            
         }
     }
 }

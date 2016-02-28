@@ -166,6 +166,41 @@ class TransitAppTests: XCTestCase {
         waitForExpectationsWithTimeout(10.0, handler:nil)
         
     }
-
+    
+    /**
+    Teste the data provider that currently only loads data from json
+     */
+    func testCandSearchForRoutes(){
+        let dataProvider = DataProvider()
+        let routes = dataProvider.searchForRoutes()
+        XCTAssertNotNil(routes)
+    }
+    
+    /**
+    Test the NSDate+Extension
+    */
+    func testCanGetStringValueWithHourAndMinuteFromNSDate() {
+        let date = NSDate(datetimeString: "2015-04-17T13:56:00+02:00")
+        let hoursAndMinutes = date.stringValueWithHourAndMinute
+        //Value in local timezone
+        XCTAssertEqual(hoursAndMinutes, "8:56")
+    }
+    
+    /**
+    Test the UIColor+Extension
+    */
+    func testCanCreateUIColorFromDifferentHexStrings() {
+        let color3 = UIColor(hexString: "#FFF")
+        XCTAssertNotNil(color3)
+        
+        let color6 = UIColor(hexString: "#FFFFFF")
+        XCTAssertNotNil(color6)
+        
+        let color8 = UIColor(hexString: "#FFFFFF00")
+        XCTAssertNotNil(color8)
+        
+        let colorDefault = UIColor(hexString: "#FFFFFFFFFF")
+        XCTAssertNotNil(colorDefault)
+    }
     
 }

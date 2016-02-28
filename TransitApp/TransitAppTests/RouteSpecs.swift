@@ -97,6 +97,18 @@ class RouteSpecs: QuickSpec {
                 expect(route.duration).to(equal(expected_duration))
             }
             
+            it("has a timestring representation of starting point"){
+                expect(route.timeStringRepresentation(.Start)).to(equal("8:30"))
+            }
+            
+            it("has a timestring representation of finishing point"){
+                expect(route.timeStringRepresentation(.Finish)).to(equal("8:40"))
+            }
+            
+            it("has a summary"){
+                expect(route.summary).to(equal("EUR: 0.0 | 8:30 -> 8:40"))
+            }
+            
         }
         
     }
