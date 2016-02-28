@@ -45,3 +45,9 @@ $ open TransitApp/TransitApp.xcworkspace/
 - SVGKit (2.x)
 - Unbox (1.3.1)
 
+# App images
+
+![Alt text](screenshots/inital.png "Initial screen")
+![Alt text](screenshots/routes.png "Available routes")
+![Alt text](screenshots/route-segments.png "Route details")
+![Alt text](screenshots/route-segments2.png "Route details 2")
