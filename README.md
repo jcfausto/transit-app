@@ -2,7 +2,7 @@
 
 # Transit App
 
-Aa iOS Swift application that given some routes (provided as json data) presents it to the user.
+An iOS swift app that shows route information and plots the route on a map. It was used polylines to plot the route's segments on the map and also used SVGKit to deal with the images for each route segment. Those svg's icons images are downloaded, cached and converted into images that are displayed for the user.
 
 # Install
 
