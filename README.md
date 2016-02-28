@@ -54,4 +54,4 @@ $ open TransitApp/TransitApp.xcworkspace/
 
 # Licence
 
-This is an study project, so feel free to use.
+This is a study project, so feel free to use it.
